@@ -162,6 +162,7 @@ function checkCPF(strCPF) {
     var Resto;
     Soma = 0;
     strCPF = strCPF.replace(/[^0-9]/g, '');
+
     if (strCPF == "00000000000") return false;
 
     for (i = 1; i <= 9; i++) Soma = Soma + parseInt(strCPF.substring(i - 1, i)) * (11 - i);
